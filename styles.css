@@ -34,17 +34,7 @@ body{
     text-align: center;
 }
 
-.div-pngs{
-    width: 327px;
-    height: 276px;
-    border: solid;
-    border-radius: 20px;
-    border-color: rgba(119, 47, 211, 1);
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} 
+
 
 input {
     width: 340px;
@@ -56,7 +46,15 @@ input {
     opacity: 1;
     border-width: 1px;
     border-color:  rgba(187, 187, 187, 1) ;
+    font-weight: bold;
 
+}
+input::placeholder {
+    color:  rgba(85, 85, 85, 1);
+}
+
+#valor-total {
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .button1 {
@@ -70,7 +68,16 @@ input {
     line-height: 18px;
     color: white;
     background-color: rgb(119, 47, 211);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    border: none;
+    cursor: pointer;
+    
 
+}
+
+.button1:hover {
+    background-color: rgb(118, 199, 81) ;
+    transition: 0.5s;
 }
 
 
@@ -81,4 +88,34 @@ label {
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
+    color: rgba(119, 119, 119, 1);
+    vertical-align: middle;
+}
+
+span {
+    display: flex;
+    position: relative;
+    margin-left: 6px;
+    color: rgba(119, 119, 119, 1);
+    font-weight: bold;
+}               
+
+.div-pngs{
+    width: 327px;
+    height: 276px;
+    border: solid;
+    border-radius: 20px;
+    border-color: rgba(119, 47, 211, 1);
+    position: absolute;
+    top: 77%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+figure {
+    margin-top: 5px;
+    
+}
+.Seta {
+    margin-top: 10px;
 }
