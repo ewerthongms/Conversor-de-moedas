@@ -16,39 +16,39 @@
     <div class="wrapper">
         <img src="./img/img-1.gif" alt="Logo1" class="Logo-1">
         <main class="main-div">
-            <article class="article1">
-                <label for="moeda-local">Converter<span>de</span></label>
-                <input type="text" placeholder="  R$ Real brasileiro" id="moeda-local">
-            </article>
-            <br>
-            <article class="article2">
-                <label for="moeda-ext">Converter <span>para</span></label>
-                <input type="text" placeholder="  US$ Dólar americano" id="moeda-ext">
-            </article>
-            <br>
-            <article class="article3">
-                <label for="valor-total"><b>Valor</b></label class="label">
-                <input type="text" placeholder="  R$ 10.000,00" id="valor-total">
-            </article>
-            <br>
-            <Button class="button1">Converter</Button>
+            <label for="Select1">Converter <b>de</b>
+                <select name="Real Brasileiro" id="Select1">
+                    <option value="R$ Real Brasileiro">R$ Real Brasileiro</option>
+                </select>
+            </label>
+            <label for="Select2">Converter <b>para</b>
+                <select name="Real Brasileiro" id="Select2">
+                    <option value="US$ Dólar americano">US$ Dólar americano</option>
+                    <option value="Euro">Euro</option>
+                </select>
+            </label>
+                <label for="valor-total"><b>Valor</b></label class="label-valor">
+                <input type="number" placeholder="  R$ 10.000,00" id="valor-total">
+            <Button onclick="convert()" class="button1">Converter</Button>
             <div class="div-pngs">
-                <figure>
-                    <img src="./img/brasil 2.png" alt="Bandeira1" class="Brasil">
-                    <figcaption>Real</figcaption>
-                    <p><b>R$ 10.000,00</b></p>
-                </figure>
-                <img src="./img/Vector.png" alt="vetor" class="Seta">
-                <figure>
-                    <img src="./img/estados-unidos (1) 1.png" alt="Bandeira2" class="EUA">
-                    <figcaption>Dólar Americano</figcaption>
-                    <p><b>US$ 2.000.00</b></p>
-                </figure>
-
-
+            <figure>
+                <img id="img1" src="./img/brasil 2.png" alt="Bandeira1" class="Brasil">
+                <img id="img2" src="./img/euro img.png" alt="bandeiraEuro" style="display: none;">
+                <figcaption>Real</figcaption>
+                <div id="pai"><b class="soueu">R$ 0.00</b></div>
+            </figure>
+            <img src="./img/Vector.png" alt="vetor" class="Seta">
+            <figure>
+                <img src="./img/estados-unidos (1) 1.png" alt="Bandeira2" class="EUA">
+                <figcaption>Dólar Americano</figcaption>
+                <p><b>US$ 0.00</b></p>
+            </figure>
             </div>
 
-        </main>
+
+    </div>
+
+    </main>
 
 
 
