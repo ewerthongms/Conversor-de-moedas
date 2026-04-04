@@ -1,27 +1,23 @@
-
-
-    const BRL = document.getElementById("moeda-local")
-    const moedaConvertida = document.getElementById("moeda-ext")
-    const Resultado = document.getElementById("valor-total")
-
+    const convertButton = document.querySelector(".button1")
 
 
 function convert() {
+    const valorPrimario = document.getElementById("valor-total").value
+    const ValorAconverter = document.getElementById("valor-a-converter")
+    const ValorConvertido = document.getElementById("valor-convertido")
 
-    const realConversor = document.querySelector(".soueu")
+    const DolarAtual = 5.16
     
-    realConversor.textContent = Resultado.value
+    const valorAserConvertido = valorPrimario / DolarAtual
 
-
+    ValorAconverter.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(valorPrimario)
+    ValorConvertido.innerHTML = "US$" + valorAserConvertido.toFixed(2);
+    console.log(valorAserConvertido) 
+    
 }
+    
 
-function trocarImagem() {
-    let imagem2 = document.getElementById("img2")
-   let imagem = document.getElementById('img1');
-  if (imagem.src.match("img1")) {
-    imagem2.src = "img2"; // Troca para a nova imagem
-  } else {
-    imagem.src = "img1"; // Volta para a original
-  }
-}
- 
+convertButton.addEventListener("click", convert)
