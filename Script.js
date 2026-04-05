@@ -38,7 +38,7 @@ function convert() {
 
 function mudandoBandeiras() {
     const nomeResultado = document.getElementById("currency-name")
-    const curranceyImg = document.getElementById("img3")
+    const curranceyImg = document.querySelector(".imagem3")
 
 
 
@@ -49,7 +49,7 @@ function mudandoBandeiras() {
     
     if (selectDocambio.value == "euro") {
         nomeResultado.innerHTML = "Euro"
-        curranceyImg.src = "./assets/img/euro.png"
+        curranceyImg.src = "./assets/img/Brasil.png"
         curranceyImg.style.width = "45px"
         curranceyImg.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
     }
