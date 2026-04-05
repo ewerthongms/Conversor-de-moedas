@@ -44,12 +44,12 @@ function mudandoBandeiras() {
 
     if (selectDocambio.value == "dolar") {
         nomeResultado.innerHTML = "Dólar Americano"
-        curranceyImg.src = "./img/Eua.png"
+        curranceyImg.src = "./assets/img/Eua.png"
     }
     
     if (selectDocambio.value == "euro") {
         nomeResultado.innerHTML = "Euro"
-        curranceyImg.src = "./img/Euro.png"
+        curranceyImg.src = "./assets/img/euro.png"
         curranceyImg.style.width = "45px"
         curranceyImg.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
     }
