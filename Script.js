@@ -9,6 +9,7 @@ function convert() {
 
     const DolarAtual = 5.16
     const EuroAtual = 5.95
+    const BitcoinAtual = 0.0000029
 
     //se o select estiver com a opção dolar selecionada, faça isso.
     if (selectDocambio.value == "dolar") {
@@ -25,6 +26,13 @@ function convert() {
         }).format(valorPrimario / EuroAtual)
     }
 
+    if (selectDocambio.value == "bitcoin") {
+        ValorConvertido.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(valorPrimario * BitcoinAtual)
+    }
+
 
     ValorAconverter.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
@@ -38,7 +46,7 @@ function convert() {
 
 function mudandoBandeiras() {
     const nomeResultado = document.getElementById("currency-name")
-    const curranceyImg = document.querySelector(".imagem3")
+    const curranceyImg = document.getElementById("img3")
 
 
 
@@ -49,11 +57,24 @@ function mudandoBandeiras() {
     
     if (selectDocambio.value == "euro") {
         nomeResultado.innerHTML = "Euro"
-        curranceyImg.src = "./assets/img/euro.png"
+        curranceyImg.src = "./assets/img/Euro.png"
         curranceyImg.style.width = "45px"
         curranceyImg.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
     }
+
+    if (selectDocambio.value == "bitcoin") {
+        nomeResultado.innerHTML = "Bitcoin"
+        curranceyImg.src = "./assets/img/Bitcoin.png"
+        curranceyImg.style.width = "45px"
+        curranceyImg.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
+    }
+
+
+
+
+
     convert()
+
 
 }
 
