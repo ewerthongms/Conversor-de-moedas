@@ -35,9 +35,37 @@ function convert() {
     console.log(selectDocambio.value) 
     
 }
-    
 
+function mudandoBandeiras() {
+    const nomeResultado = document.getElementById("currency-name")
+    const curranceyImg = document.getElementById("img3")
+
+
+
+    if (selectDocambio.value == "dolar") {
+        nomeResultado.innerHTML = "Dólar Americano"
+        curranceyImg.src = "./assets/img/Eua.png"
+    }
+    
+    if (selectDocambio.value == "euro") {
+        nomeResultado.innerHTML = "Euro"
+        curranceyImg.src = "./assets/img/Euro.png"
+        curranceyImg.style.width = "45px"
+        curranceyImg.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
+    }
+    convert()
+
+}
+
+
+selectDocambio.addEventListener("change", mudandoBandeiras)
 convertButton.addEventListener("click", convert)
 
 
+const cores = ["rgb(125, 58, 214)", "#030ea0", "#3357ff", "rgb(90, 1, 255)"]; // Suas cores
+    let indice = 0;
 
+    setInterval(() => {
+    document.body.style.backgroundColor = cores[indice];
+    indice = (indice + 1) % cores.length; // Volta ao início após a última cor
+    }, 400); // Muda a cada 2000ms (2 segundos)

@@ -14,7 +14,7 @@
 
 <body>
     <div class="wrapper">
-        <img src="./img/img-1.gif" alt="Logo1" class="Logo-1">
+        <img src="./assets/img/img-1.gif" alt="Logo1" class="Logo-1">
         <main class="main-div">
             <label for="Select1">Converter <b>de</b>
                 <select name="Real Brasileiro" id="Select1">
@@ -23,7 +23,7 @@
             </label>
 
             <label for="Select2">Converter <b>para</b>
-                <select name="Real Brasileiro" id="Select2">
+                <select name="Real Brasileiro" id="Select2" onchange="mudandoBandeiras()">
                     <option value="dolar">US$ Dólar americano</option>
                     <option value="euro">€ Euro</option>
                 </select>
@@ -38,15 +38,14 @@
 
             <div class="div-pngs">
                 <figure>
-                    <img id="img1" src="./img/brasil 2.png" alt="Bandeira1" class="Brasil">
+                    <img id="img1" src="./assets/img/Brasil.png" alt="Bandeira1" class="Brasil">
                     <figcaption>Real</figcaption>
                     <p id="valor-a-converter"><b>R$ 0.00</b></p>
                 </figure>
-                <img src="./img/Vector.png" alt="vetor" class="Seta">
+                <img src="./assets/img/Vector.png" alt="vetor" class="Seta">
                 <figure>
-                    <img id="img2" src="./img/euro img.png" alt="bandeiraEuro" style="display: none;">
-                    <img id="img3" src="./img/estados-unidos (1) 1.png" alt="Bandeira2" class="EUA">
-                    <figcaption>Dólar Americano </figcaption>
+                    <img id="img3" src="./assets/img/Eua.png" alt="Bandeira" class="EUA">
+                    <figcaption id="currency-name">Dólar Americano </figcaption>
                     <p id="valor-convertido"><b>US$ 0.00</b></p>
                 </figure>
             </div>
