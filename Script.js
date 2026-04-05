@@ -62,7 +62,7 @@ selectDocambio.addEventListener("change", mudandoBandeiras)
 convertButton.addEventListener("click", convert)
 
 
-const cores = ["rgb(125, 58, 214)", "#030ea0", "#3357ff", "rgb(90, 1, 255)"]; // Suas cores
+const cores = ["#772FD3;", "#3c0286;", "#6c08af", "rgb(90, 1, 255)"]; // Suas cores
     let indice = 0;
 
     setInterval(() => {
