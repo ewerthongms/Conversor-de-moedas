@@ -57,14 +57,14 @@ function mudandoBandeiras() {
     
     if (selectDocambio.value == "euro") {
         nomeResultado.innerHTML = "Euro"
-        curranceyImg.src = "./assets/img/Euro.png"
+        curranceyImg.src = "./assets/img/euro.png"
         curranceyImg.style.width = "45px"
         curranceyImg.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
     }
 
     if (selectDocambio.value == "bitcoin") {
         nomeResultado.innerHTML = "Bitcoin"
-        curranceyImg.src = "./assets/img/Bitcoin.png"
+        curranceyImg.src = "./assets/img/bitcoin.png"
         curranceyImg.style.width = "45px"
         curranceyImg.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
     }
