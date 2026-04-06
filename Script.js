@@ -1,6 +1,6 @@
     const convertButton = document.querySelector(".button1")
     const selectDocambio = document.getElementById("Select2")
-
+    const selectDocambio2 = document.getElementById("Select1")
 
 function convert() {
     const valorPrimario = document.getElementById("valor-total").value
@@ -11,6 +11,7 @@ function convert() {
     const EuroAtual = 5.95
     const BitcoinAtual = 0.0000029
 
+    
     //se o select estiver com a opção dolar selecionada, faça isso.
     if (selectDocambio.value == "dolar") {
         ValorConvertido.innerHTML = new Intl.NumberFormat("en-US", {
@@ -33,6 +34,13 @@ function convert() {
         }).format(valorPrimario * BitcoinAtual)
     }
 
+    if (selectDocambio.value == "R$ Real Brasileiro") {
+        ValorConvertido.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(valorPrimario)
+    }
+
 
     ValorAconverter.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
@@ -43,6 +51,44 @@ function convert() {
     console.log(selectDocambio.value) 
     
 }
+
+function mudandoBandeiras2() {
+    const nomeRedultado2 = document.getElementById("currency-name2")
+    const curranceyImg2 = document.getElementById("img1")
+
+    if (selectDocambio2.value == "R$ Real Brasileiro") {
+        nomeRedultado2.innerHTML = "Real Brasileiro"
+        curranceyImg2.src = "./assets/img/Brasil.png"
+        curranceyImg2.style.width = "45px"
+        curranceyImg2.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
+    }
+    if (selectDocambio2.value == "US$ Dolar americano") {
+        nomeRedultado2.innerHTML = "Dólar Americano"
+        curranceyImg2.src = "./assets/img/Eua.png"
+        curranceyImg2.style.width = "45px"
+        curranceyImg2.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
+    }
+    if (selectDocambio2.value == "€ Euro") {
+        nomeRedultado2.innerHTML = "Euro"
+        curranceyImg2.src = "./assets/img/euro.png"
+        curranceyImg2.style.width = "45px"
+        curranceyImg2.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
+    }
+    if (selectDocambio2.value == "₿ Bitcoin") {
+        nomeRedultado2.innerHTML = "Bitcoin"
+        curranceyImg2.src = "./assets/img/bitcoin.png"
+        curranceyImg2.style.width = "45px"
+        curranceyImg2.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
+    }
+
+}
+
+
+
+
+
+
+
 
 function mudandoBandeiras() {
     const nomeResultado = document.getElementById("currency-name")
@@ -65,6 +111,13 @@ function mudandoBandeiras() {
     if (selectDocambio.value == "bitcoin") {
         nomeResultado.innerHTML = "Bitcoin"
         curranceyImg.src = "./assets/img/bitcoin.png"
+        curranceyImg.style.width = "45px"
+        curranceyImg.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
+    }
+
+    if (selectDocambio.value == "R$ Real Brasileiro") {
+        nomeResultado.innerHTML = "Real Brasileiro"
+        curranceyImg.src = "./assets/img/Brasil.png"
         curranceyImg.style.width = "45px"
         curranceyImg.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
     }
