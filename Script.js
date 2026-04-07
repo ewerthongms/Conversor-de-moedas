@@ -60,7 +60,7 @@ function mudandoBandeiras2() {
 
     if (select2.value == "dolar") {
         NomeBand.innerHTML = "Dólar americano"
-        bandeiras.src ="./assets/img/dolar.png"
+        bandeiras.src ="./assets/img/Eua.png"
         bandeiras.style.width = "45px"
         bandeiras.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
 
