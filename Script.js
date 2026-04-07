@@ -7,54 +7,54 @@ function convert() {
     const convertedValue = document.getElementById("valor-convertido")
     const valorAConverter = document.getElementById("valor-a-converter")
 
-    const rates = {
-        real: 1,
-        dolar: 5.10,
-        euro: 5.96,
-        bitcoin: 300000
+    const dolar = 5.16
+    const euro = 5.35 
+    const bitcoin = 0.0000047
+    const real = 1
+
+
+    if (select1.value == "dolar") {
+        valorAConverter.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputValue / dolar)
+    }
+        if (select1.value == "euro") {
+        valorAConverter.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputValue / euro)
+    }
+        if (select1.value == "bitcoin") {
+        valorAConverter.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputValue * bitcoin)
     }
 
-    const moedaOrigem = select1.value
-    const moedaDestino = select2.value
+        if (select1.value == "real") {
+        valorAConverter.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(real * inputValue)
 
-    //  converte origem → real
-    const valorEmReal = inputValue * rates[moedaOrigem]
-
-    //  converte real → destino
-    const valorFinal = valorEmReal / rates[moedaDestino]
-
-    //  MOSTRA valor original corretamente
-    valorAConverter.innerHTML = formatCurrency(inputValue, moedaOrigem)
-
-    //  MOSTRA valor convertido corretamente
-    convertedValue.innerHTML = formatCurrency(valorFinal, moedaDestino)
-
-    if (select1.value === select2.value) {
-        alert("Selecione moedas diferentes para converter")
-        return
+    if (select2.value == "bitcoin") { 
+        convertedValue.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "BTC"
+        }).format(inputValue * bitcoin)
+    }
+    
+    if (select2.value == "real") {
+        convertedValue.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputValue * real)
     }
 
 
 }
-
-function formatCurrency(value, currency) {
-    if (currency === "bitcoin") {
-        return value.toFixed(8) + " BTC"
-    }
-
-    const formats = {
-        real: { locale: "pt-BR", currency: "BRL" },
-        dolar: { locale: "en-US", currency: "USD" },
-        euro: { locale: "de-DE", currency: "EUR" }
-    }
-
-    return new Intl.NumberFormat(formats[currency].locale, {
-        style: "currency",
-        currency: formats[currency].currency
-    }).format(value)
-
 }
-
 
 function mudandoBandeiras2() {
     const NomeBand = document.getElementById("currency-name2")
@@ -89,7 +89,7 @@ function mudandoBandeiras2() {
         bandeiras.src = "./assets/img/Brasil.png"
         bandeiras.style.width = "45px"
         bandeiras.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
-
+        
     }
 
     convert()
@@ -113,7 +113,7 @@ function mudandoBandeiras1() {
         bandeiras.src = "./assets/img/Eua.png"
         bandeiras.style.width = "45px"
         bandeiras.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
-    }
+    }    
 
     if (select1.value == "euro") {
         nomeBand.innerHTML = "Euro"
@@ -131,10 +131,11 @@ function mudandoBandeiras1() {
 
 
 
-    convert()
+convert()
 
 
 }
+
 convertButton.addEventListener("click", convert)
 select2.addEventListener("change", mudandoBandeiras2)
 select1.addEventListener("change", mudandoBandeiras1)
