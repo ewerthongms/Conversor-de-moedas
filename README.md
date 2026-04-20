@@ -6,9 +6,9 @@ Um conversor de moedas moderno e funcional desenvolvido com **HTML, CSS e JavaSc
 
 ## 🖼️ Preview do projeto
 
-![Preview do Conversor](./assets/preview.png)
+![Preview do Conversor](./assets/img/preview.png)
 
-> 💡 *Dica:* salve a imagem do seu projeto como `preview.png` dentro da pasta `assets` para que ela apareça corretamente no GitHub.
+
 
 ---
 
