@@ -134,7 +134,6 @@ function mudandoBandeiras1() {
 
 
 }
-
 convertButton.addEventListener("click", convert)
 select2.addEventListener("change", mudandoBandeiras2)
 select1.addEventListener("change", mudandoBandeiras1)
