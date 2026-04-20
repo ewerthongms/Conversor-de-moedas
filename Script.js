@@ -3,7 +3,7 @@ const select2 = document.getElementById("Select2")
 const convertButton = document.querySelector(".button1")
 
 function convert() {
-   const inputValue = Number(document.getElementById("valor-total").value)
+    const inputValue = Number(document.getElementById("valor-total").value)
     const convertedValue = document.getElementById("valor-convertido")
     const valorAConverter = document.getElementById("valor-a-converter")
 
@@ -11,7 +11,7 @@ function convert() {
         real: 1,
         dolar: 5.10,
         euro: 5.96,
-        bitcoin: 0.0000047
+        bitcoin: 300000
     }
 
     const moedaOrigem = select1.value
@@ -30,9 +30,9 @@ function convert() {
     convertedValue.innerHTML = formatCurrency(valorFinal, moedaDestino)
 
     if (select1.value === select2.value) {
-    alert("Selecione moedas diferentes para converter")
-    return
-}
+        alert("Selecione moedas diferentes para converter")
+        return
+    }
 
 
 }
@@ -61,7 +61,7 @@ function mudandoBandeiras2() {
 
     if (select2.value == "dolar") {
         NomeBand.innerHTML = "Dólar americano"
-        bandeiras.src ="./assets/img/Eua.png"
+        bandeiras.src = "./assets/img/Eua.png"
         bandeiras.style.width = "45px"
         bandeiras.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
 
@@ -69,7 +69,7 @@ function mudandoBandeiras2() {
 
     if (select2.value == "euro") {
         NomeBand.innerHTML = "Euro"
-        bandeiras.src ="./assets/img/euro.png"
+        bandeiras.src = "./assets/img/euro.png"
         bandeiras.style.width = "45px"
         bandeiras.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
 
@@ -77,7 +77,7 @@ function mudandoBandeiras2() {
 
     if (select2.value == "bitcoin") {
         NomeBand.innerHTML = "Bitcoin"
-        bandeiras.src ="./assets/img/bitcoin.png"
+        bandeiras.src = "./assets/img/bitcoin.png"
         bandeiras.style.width = "45px"
         bandeiras.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
 
@@ -85,12 +85,12 @@ function mudandoBandeiras2() {
 
     if (select2.value == "real") {
         NomeBand.innerHTML = "Real Brasileiro"
-        bandeiras.src ="./assets/img/Brasil.png"
+        bandeiras.src = "./assets/img/Brasil.png"
         bandeiras.style.width = "45px"
         bandeiras.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
-        
+
     }
-    
+
     convert()
 }
 
@@ -112,7 +112,7 @@ function mudandoBandeiras1() {
         bandeiras.src = "./assets/img/Eua.png"
         bandeiras.style.width = "45px"
         bandeiras.style.filter = "drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5))"
-    }    
+    }
 
     if (select1.value == "euro") {
         nomeBand.innerHTML = "Euro"
@@ -130,7 +130,7 @@ function mudandoBandeiras1() {
 
 
 
-convert()
+    convert()
 
 
 }
