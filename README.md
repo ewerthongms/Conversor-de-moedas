@@ -9,7 +9,6 @@ Um conversor de moedas moderno e funcional desenvolvido com **HTML, CSS e JavaSc
 ![Preview do Conversor](./assets/img/preview.png)
 
 
-
 ---
 
 ## 🚀 Funcionalidades
