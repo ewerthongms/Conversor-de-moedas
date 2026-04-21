@@ -55,6 +55,7 @@ function formatCurrency(value, currency) {
 
 }
 
+
 function mudandoBandeiras2() {
     const NomeBand = document.getElementById("currency-name2")
     const bandeiras = document.getElementById("img3")
