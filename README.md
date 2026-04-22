@@ -145,20 +145,6 @@ value.toFixed(8) + " BTC"
 
 ---
 
-## ▶️ Como executar
-
-```bash
-git https://github.com/ewerthongms/Conversor-de-moedas.git
-cd 
-```
-
-Abra o arquivo:
-
-```index.html
-
-
-
-```
 
 ---
 
