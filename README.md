@@ -41,11 +41,11 @@ Um conversor de moedas moderno e funcional desenvolvido com **HTML, CSS e JavaSc
 📁 conversor-de-moedas
 ├── 📁 assets
 │   ├── 📁 img
-│   │   ├── Brasil.png
-│   │   ├── Eua.png
-│   │   ├── euro.png
-│   │   └── bitcoin.png
-│   └── preview.png
+│       ├── Brasil.png
+│       ├── Eua.png
+│       ├── euro.png
+│       └── bitcoin.png
+│       └── preview.png
 ├── index.html
 ├── styles.css
 └── script.js
@@ -62,7 +62,7 @@ O sistema utiliza o Real (BRL) como base:
 1. Converte a moeda de origem para Real
 2. Converte de Real para a moeda destino
 
-```js
+```
 const valorEmReal = inputValue * rates[moedaOrigem]
 const valorFinal = valorEmReal / rates[moedaDestino]
 ```
@@ -71,7 +71,7 @@ const valorFinal = valorEmReal / rates[moedaDestino]
 
 ### 💰 Taxas de conversão
 
-```js
+```
 const rates = {
     real: 1,
     dolar: 5.10,
@@ -88,7 +88,7 @@ const rates = {
 
 Evita moedas iguais:
 
-```js
+```
 if (select1.value === select2.value) {
     alert("Selecione moedas diferentes para converter")
     return
@@ -97,7 +97,7 @@ if (select1.value === select2.value) {
 
 Evita valores inválidos:
 
-```js
+```
 if (!inputValue || inputValue <= 0) {
     alert("Digite um valor válido")
     return
@@ -110,7 +110,7 @@ if (!inputValue || inputValue <= 0) {
 
 Utiliza a API `Intl.NumberFormat`:
 
-```js
+```
 new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL"
