@@ -149,13 +149,15 @@ value.toFixed(8) + " BTC"
 
 ```bash
 git https://github.com/ewerthongms/Conversor-de-moedas.git
-cd conversor-de-moedas
+cd 
 ```
 
 Abra o arquivo:
 
-```
-index.html
+```index.html
+
+
+
 ```
 
 ---
