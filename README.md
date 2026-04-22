@@ -148,7 +148,7 @@ value.toFixed(8) + " BTC"
 ## ▶️ Como executar
 
 ```bash
-git clone https://github.com/seu-usuario/conversor-de-moedas.git
+git https://github.com/ewerthongms/Conversor-de-moedas.git
 cd conversor-de-moedas
 ```
 
